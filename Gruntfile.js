@@ -8,7 +8,6 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
         watch: {
             livereload: {
                 files: ['src/index.html'],
@@ -38,12 +37,12 @@ module.exports = function (grunt) {
             }
         },
         open: {
-            dev: {
+            connect: {
                 path: 'http://127.0.0.1:8888',
                 app: 'google-chrome'
             },
-            release: {
-                path: 'dist/index.html',
+            dev: {
+                path: 'src/index.html',
                 app: 'google-chrome'
             }
         },
@@ -57,16 +56,10 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'src/',
                         src: ['**/*.{png,jpg,gif}'],
-                        dest: 'dist/'
+                        dest: 'src/'
                     }
                 ]
             }
-        },
-        clean: {
-            build: ["dist"]
-        },
-        bumpup: {
-            files: ['package.json', 'bower.json']
         }
     });
 
@@ -76,7 +69,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-html');
-    grunt.loadNpmTasks('grunt-bumpup');
 
 
     // Default task
@@ -87,9 +79,9 @@ module.exports = function (grunt) {
         console.log("  watch:\tAuto pushes updates to the browser on save");
         console.log("  connect:\tStart a local server for testing on port 8888");
         console.log("  dev:\tRuns all dev commands, if your are developing you want this");
-        console.log("  open:dev\tOpens Google Chrome to the index page on port 8888");
-        console.log("  open:release\tOpens the release html file");
-        console.log("  build\tCreates the release file in the dist folder");
+        console.log("  open:connect\tOpens Google Chrome to the index page on port 8888");
+        console.log("  open:dev\tOpens the html file in chrome");
+        console.log("  imagemin\tOptimize your images for the web");
     });
 
     grunt.registerTask('dev', 'Runs all dev commands, if your are developing you want this', 'concurrent:target');

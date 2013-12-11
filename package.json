@@ -17,7 +17,6 @@
     "grunt-open": "~0.2.2",
     "grunt-html": "~0.3.4",
     "grunt-concurrent": "~0.4.2",
-    "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-bumpup": "~0.4.2"
+    "grunt-contrib-imagemin": "~0.4.0"
   }
 }
