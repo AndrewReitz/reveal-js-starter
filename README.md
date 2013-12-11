@@ -1,4 +1,4 @@
-#Reeal Js Starter
+# Reveal Js Starter
 
 I set this project up so I could have some grunt plugins I like already setup and ready to go for reveal.js
 
@@ -8,8 +8,8 @@ You must have npm and bower installed
 Download, pull or clone this repo
 
 Then run
-    npm install
-    bower install
+    `npm install`
+    `bower install`
 
 Check `grunt help` for development options
 
