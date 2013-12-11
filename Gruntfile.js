@@ -50,13 +50,6 @@ module.exports = function (grunt) {
         htmllint: {
             all: ["src/index.html"]
         },
-        smoosher: {
-            all: {
-                files: {
-                    'dist/index.html': 'src/index.html'
-                }
-            }
-        },
         imagemin: {
             dynamic: {
                 files: [
@@ -74,39 +67,16 @@ module.exports = function (grunt) {
         },
         bumpup: {
             files: ['package.json', 'bower.json']
-        },
-        copy: {
-            release: {
-                files: [
-                    {src: ['src/lib/**'], dest: 'dist/lib/'}
-                ]
-            }
-        },
-        html_minify: {
-            options: {
-            },
-            release: {
-                files: [
-                    {
-                        src: ['dist/index.html'],
-                        dest: 'dist/index.html'
-                    }
-                ]
-            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-html');
-    grunt.loadNpmTasks('grunt-html-smoosher');
     grunt.loadNpmTasks('grunt-bumpup');
-    grunt.loadNpmTasks('grunt-html-minify');
 
 
     // Default task
@@ -123,14 +93,4 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('dev', 'Runs all dev commands, if your are developing you want this', 'concurrent:target');
-
-    grunt.registerTask('build', 'Creates the release file in the dist folder',
-        [
-            'copy:release',
-            'smoosher',
-            'imagemin',
-            'html_minify',
-            'bumpup'
-        ]
-    );
 };

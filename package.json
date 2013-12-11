@@ -1,7 +1,7 @@
 {
   "name": "Reveal-JS-Starter",
   "description": "reveal.js starter project",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Andrew Reitz",
   "repository": {
     "type": "git",
@@ -17,11 +17,7 @@
     "grunt-open": "~0.2.2",
     "grunt-html": "~0.3.4",
     "grunt-concurrent": "~0.4.2",
-    "grunt-html-smoosher": "~0.1.1",
     "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-bumpup": "~0.4.2",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-html-minify": "~0.3.1"
+    "grunt-bumpup": "~0.4.2"
   }
 }
