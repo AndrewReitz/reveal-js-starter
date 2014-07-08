@@ -2,6 +2,6 @@
   "name": "Reveal-JS-Starter",
   "version": "0.0.4",
   "dependencies": {
-    "reveal.js": "~2.6.1"
+    "reveal.js": "~2.6.2"
   }
 }
