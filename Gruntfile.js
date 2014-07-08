@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             target: {
-                tasks: ['connect', 'watch', 'open:dev'],
+                tasks: ['connect', 'watch', 'open:connect'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
         console.log("  connect:\tStart a local server for testing on port 8888");
         console.log("  dev:\tRuns all dev commands, if your are developing you want this");
         console.log("  open:connect\tOpens Google Chrome to the index page on port 8888");
-        console.log("  open:dev\tOpens the html file in chrome");
+        console.log("  open:dev\tOpens Google Chrome to the html file in chrome");
         console.log("  imagemin\tOptimize your images for the web");
     });
 
