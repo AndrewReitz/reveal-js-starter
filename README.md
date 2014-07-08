@@ -5,13 +5,14 @@ I set this project up so I could have some grunt plugins I like already setup an
 ## How to use
 You must have npm and bower installed
 
-Download, pull or clone this repo
+1. [Download](https://github.com/pieces029/reveal-js-starter/archive/v1.0.zip) the starter project.
+1. Extract the zip file
 
-Then run
+1. Then run
     `npm install`
     `bower install`
 
-Check `grunt help` for development options
+Check `grunt help` for a list of commands you can run
 
 Clean out this README.md and fill it out with your own info
 Open up src/index.html and start configuring it your way
