@@ -3,6 +3,7 @@
 bower_components/
 node_modules/
 src/lib/
+.grunt
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode
 
