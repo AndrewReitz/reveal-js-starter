@@ -83,7 +83,7 @@ module.exports = function (grunt) {
                 options: {
                     process: function (content, srcpath) { // Remove remote from release/gh-pages version
                         return content.replace(
-                            "{ src: 'lib/reveal.js/plugin/remotes/remotes.js', async: true, condition: function () { return !!document.body.classList; }}",
+                            ", { src: 'lib/reveal.js/plugin/remotes/remotes.js', async: true, condition: function () { return !!document.body.classList; } }",
                             ""
                         );
                     }
