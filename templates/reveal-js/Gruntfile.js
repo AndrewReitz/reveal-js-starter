@@ -2,7 +2,7 @@
  * @fileOverview
  * grunt commands for grunt-cli that will make your life better!
  *
- * @author Pieces029
+ * @author Andrew Reitz
  */
 module.exports = function (grunt) {
     'use strict';

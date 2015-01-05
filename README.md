@@ -1,18 +1,24 @@
-# Reveal Js Starter
+Lazybones template project
+--------------------------
 
-I set this project up so I could have some grunt plugins I like already setup and ready to go for reveal.js
+You have just created a simple project for managing your own Lazybones project
+templates. You get a build file (`build.gradle`) and a directory for putting
+your templates in (`templates`).
 
-## How to use
-You must have npm and bower installed
+To get started, simply create new directories under the `templates` directory
+and put the source of the different project templates into them. You can then
+package and install the templates locally with the command:
 
-1. [Download](https://github.com/pieces029/reveal-js-starter/archive/v1.0.zip) the starter project.
-1. Extract the zip file
+    ./gradlew installAllTemplates
 
-1. Then run
-    `npm install`
-    `bower install`
+You'll then be able to use Lazybones to create new projects from these templates.
+If you then want to distribute them, you will need to set up a Bintray account,
+populate the `repositoryUrl`, `repositoryUsername` and `repositoryApiKey` settings
+in `build.gradle`, add new Bintray packages in the repository via the Bintray
+UI, and finally publish the templates with
 
-Check `grunt help` for a list of commands you can run
+    ./gradlew publishAllTemplates
 
-Clean out this README.md and fill it out with your own info
-Open up src/index.html and start configuring it your way
+You can find out more about creating templates on [the GitHub wiki][1].
+
+[1]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
