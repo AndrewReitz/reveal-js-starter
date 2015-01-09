@@ -1,12 +1,10 @@
 # Reveal Js Template
 
-I set this project up so I could have some grunt plugins I like already setup and ready to go for reveal.js
+You have just created a new reveal js project.
 
 ## How to use
-You must have npm and bower installed
 
-1. [Download](https://github.com/pieces029/reveal-js-starter/archive/v1.0.zip) the starter project.
-1. Extract the zip file
+You must have npm and bower installed
 
 1. Then run
     `npm install`

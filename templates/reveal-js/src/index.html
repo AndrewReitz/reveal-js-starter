@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Put Your Title Here!</title>
+    <title>{{title}}</title>
 
     <!-- Fill These Out -->
-    <meta name="description" content="Presentation Name Here">
-    <meta name="author" content="Put Your Name Here">
+    <meta name="description" content="{{description}}">
+    <meta name="author" content="{{author}}">
 
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -15,8 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="lib/reveal.js/css/reveal.min.css">
-    <!-- Change this to the theme of your choice -->
-    <link rel="stylesheet" href="lib/reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="lib/reveal.js/css/theme/{{theme}}.css" id="theme">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- For syntax highlighting -->
@@ -50,8 +49,6 @@
     <script src="lib/reveal.js/js/reveal.min.js"></script>
 
     <script>
-
-        /** Configure it!! **/
         // Full list of configuration options available here:
         // https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
@@ -60,12 +57,11 @@
             history: true,
             center: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // available themes are in /css/theme
+            theme: Reveal.getQueryHash().theme,
 
-            // Parallax scrolling
-            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-            // parallaxBackgroundSize: '2100px 900px',
+            // default/cube/page/concave/zoom/linear/fade/none
+            transition: Reveal.getQueryHash().transition || 'default',
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -75,7 +71,7 @@
                 , { src: 'lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
                 , { src: 'lib/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
                 , { src: 'lib/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-                // /* comment in for remote*/, { src: 'lib/reveal.js/plugin/remotes/remotes.js', async: true, condition: function () { return !!document.body.classList; } }
+                // uncomment for remote, { src: 'lib/reveal.js/plugin/remotes/remotes.js', async: true, condition: function () { return !!document.body.classList; } }
             ]
         });
 
