@@ -1,27 +1,24 @@
-Lazybones template project
---------------------------
+# Reveal JS Starter
 
-You have just created a simple project for managing your own Lazybones project
-templates. You get a build file (`build.gradle`) and a directory for putting
-your templates in (`templates`).
+This project is to get you up and running with [reveal.js](//github.com/hakimel/reveal.js) quickly.
 
-To get started, simply create new directories under the `templates` directory
-and put the source of the different project templates into them. You can then
-package and install the templates locally with the command:
+## Getting started
 
-    ./gradlew installAllTemplates
+Requirements: Lazybones 0.7+
 
-You'll then be able to use Lazybones to create new projects from these templates.
-If you then want to distribute them, you will need to set up a Bintray account,
-populate the `repositoryUrl`, `repositoryUsername` and `repositoryApiKey` settings
-in `build.gradle`, add new Bintray packages in the repository via the Bintray
-UI, and finally publish the templates with
+Install [lazybones](https://github.com/pledbrook/lazybones) using [gvm](//gvmtool.net/),
+[jenv](//jenv.io/) or from [lazybones bintray](https://bintray.com/pledbrook/lazybones-templates/lazybones/view)
 
-    ./gradlew publishAllTemplates
+Edit/create `~/.lazybones/config.groovy` and add the following.
 
-You can find out more about creating templates on [the GitHub wiki][1].
+    bintrayRepositories = [
+      "pieces/lazybones-templates",
+      "pledbrook/lazybones-templates"
+    ]
 
-[1]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
+Run `lazybones list` to see all the available templates.
+Run `lazybones create <template name> <template version> <target directory>` to create a new
+Velcro project for example run `lazybones create reveal-js my-awesome-presentation`.
 
 # License
 
