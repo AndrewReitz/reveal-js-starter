@@ -11,9 +11,12 @@ buildscript {
 }
 
 apply plugin: "uk.co.cacoethes.lazybones-templates"
+apply from: "gradle/credentials.gradle"
 
 lazybones {
-  repositoryName = "<account>/<templates-repo>"
-  repositoryUsername = "your_bintray_username"
-  repositoryApiKey = "your_bintray_api_key"
+  licenses = ["WTFPL"]
+
+  repositoryName = "pieces/lazybones-templates"
+  repositoryUsername = bintrayUser
+  repositoryApiKey = bintrayKey
 }

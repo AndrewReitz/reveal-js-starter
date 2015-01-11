@@ -22,3 +22,12 @@ UI, and finally publish the templates with
 You can find out more about creating templates on [the GitHub wiki][1].
 
 [1]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
+
+# License
+
+    Copyright © 2015 Andrew Reitz aj.reitz@gmail.com
+    This program is free software. It comes without any warranty, to
+    the extent permitted by applicable law.
+    You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the COPYING file for more details.
