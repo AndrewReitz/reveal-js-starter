@@ -1,18 +1,30 @@
-# Reveal Js Starter
+# Reveal JS Starter
 
-I set this project up so I could have some grunt plugins I like already setup and ready to go for reveal.js
+This project is to get you up and running with [reveal.js](//github.com/hakimel/reveal.js) quickly.
 
-## How to use
-You must have npm and bower installed
+## Getting started
 
-1. [Download](https://github.com/pieces029/reveal-js-starter/archive/v1.0.zip) the starter project.
-1. Extract the zip file
+Requirements: Lazybones 0.7+
 
-1. Then run
-    `npm install`
-    `bower install`
+Install [lazybones](https://github.com/pledbrook/lazybones) using [gvm](//gvmtool.net/),
+[jenv](//jenv.io/) or from [lazybones bintray](https://bintray.com/pledbrook/lazybones-templates/lazybones/view)
 
-Check `grunt help` for a list of commands you can run
+Edit/create `~/.lazybones/config.groovy` and add the following.
 
-Clean out this README.md and fill it out with your own info
-Open up src/index.html and start configuring it your way
+    bintrayRepositories = [
+      "pieces/lazybones-templates",
+      "pledbrook/lazybones-templates"
+    ]
+
+Run `lazybones list` to see all the available templates.
+Run `lazybones create <template name> <template version> <target directory>` to create a new
+Velcro project for example run `lazybones create reveal-js my-awesome-presentation`.
+
+# License
+
+    Copyright © 2015 Andrew Reitz aj.reitz@gmail.com
+    This program is free software. It comes without any warranty, to
+    the extent permitted by applicable law.
+    You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the COPYING file for more details.
